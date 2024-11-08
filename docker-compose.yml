@@ -1,0 +1,19 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: offering-manager:latest
+    container_name: offering-manager
+    ports:
+      - "8080:8080"
+    environment:
+      BASE_URI: "http://0.0.0.0:8080/api/v1"  # API root path
+      HASH_ALGORITHM: "SHA-256"  # Hashing algorithm
+    networks:
+      - local-participant-network
+    restart: always
+
+networks:
+  local-participant-network:
+    driver: bridge
