@@ -1,18 +1,24 @@
 services:
   app:
     build:
-      context: .
+      context: .  # Current directory where the Dockerfile is located
       dockerfile: Dockerfile
-    image: offering-manager:latest
-    container_name: offering-manager
+    image: offering-manager:latest  # Name your image (will be overwritten on each build)
+    container_name: offering-manager  # Set a custom container name
     ports:
-      - "8080:8080"
+      - "8080:8080"  # Expose port 8080
     environment:
-      BASE_URI: "http://0.0.0.0:8080/api/v1"  # API root path
-      HASH_ALGORITHM: "SHA-256"  # Hashing algorithm
+      EXTERNAL_ENDPOINT: "http://uc.sedimark.eu:8080"
+      INTERNAL_ENDPOINT: "http://0.0.0.0:8080"
+      EXTERNAL_CONNECTOR_ENDPOINT: "http://localhost:29193"
+      INTERNAL_CONNECTOR_ENDPOINT: "http://localhost:29193"
+      INTERNAL_DLTBOOTH_ENDPOINT: "http://localhost:8085"
+      HASH_ALGORITHM: "SHA-256"  # Example value for ALGORITHM
     networks:
-      - local-participant-network
-    restart: always
+      - local-participant-network  # Attach to the custom network
+    volumes:
+      - /opt/offeringManager/offeringManager-0.02.jar:/app/offeringManager.jar
+    restart: always  # Optional: restart the container on failure
 
 networks:
   local-participant-network:

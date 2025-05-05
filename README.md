@@ -79,5 +79,5 @@ Persist the offering using a database (e.g. Postgres) compatible to the one used
 - **Security**:
 Limit certain endpoints to localhost access (i.e. CREATE/PUT, DELETE). Probably through Traefik.
 
-- **Async DLT Registration**:
+- **DLT Registration**: DONE
 Register the offering reference and hash in the DLT.

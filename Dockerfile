@@ -5,10 +5,10 @@ FROM openjdk:21-jdk-slim
 WORKDIR /app
 
 # Copy the Gradle build files and source code
-COPY build/libs/offeringManager-0.01.jar .
+#COPY offeringManager-0.01.jar .
 
 # Expose the port your application runs on (optional)
 EXPOSE 8080
 
 # Specify the entry point (adjust if your jar file name or main class differs)
-CMD ["java", "-jar", "offeringManager-0.01.jar"]
+CMD ["java", "-jar", "offeringManager.jar"]
