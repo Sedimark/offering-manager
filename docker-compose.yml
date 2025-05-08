@@ -10,8 +10,10 @@ services:
     environment:
       EXTERNAL_ENDPOINT: "http://uc.sedimark.eu:8080"
       INTERNAL_ENDPOINT: "http://0.0.0.0:8080"
-      EXTERNAL_CONNECTOR_ENDPOINT: "http://localhost:29193"
+      ENABLE_CONNECTOR_SERVICE: "true"
+      EXTERNAL_CONNECTOR_ENDPOINT: "http://uc.sedimark.eu:29193"
       INTERNAL_CONNECTOR_ENDPOINT: "http://localhost:29193"
+      ENABLE_DLTBOOTH_SERVICE: "true"
       INTERNAL_DLTBOOTH_ENDPOINT: "http://localhost:8085"
       HASH_ALGORITHM: "SHA-256"  # Example value for ALGORITHM
     networks:

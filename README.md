@@ -36,7 +36,8 @@ It includes a `Dockerfile` for configuring and building the service image.
     
 ## API Endpoints
 
-The OfferingManager API provides the following CRUD endpoints for managing offerings:
+The OfferingManager API provides the following CRUD endpoints for managing offerings. 
+API can be also found in the bruno and postman collections shared in this repo.
 
 - **Create Offering**:  
   `POST /offerings`  
@@ -79,5 +80,3 @@ Persist the offering using a database (e.g. Postgres) compatible to the one used
 - **Security**:
 Limit certain endpoints to localhost access (i.e. CREATE/PUT, DELETE). Probably through Traefik.
 
-- **DLT Registration**: DONE
-Register the offering reference and hash in the DLT.
