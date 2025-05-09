@@ -133,7 +133,7 @@
         },
         {
           "name": "base_path",
-          "value": "http://localhost:8080/",
+          "value": "http://localhost:8080",
           "enabled": true,
           "secret": false,
           "type": "text"
