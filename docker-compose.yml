@@ -16,6 +16,7 @@ services:
       ENABLE_DLTBOOTH_SERVICE: "true"
       INTERNAL_DLTBOOTH_ENDPOINT: "http://localhost:8085"
       HASH_ALGORITHM: "SHA-256"  # Example value for ALGORITHM
+      CONTAINER_ENDPOINT: "http://0.0.0.0:8080"
     networks:
       - local-participant-network  # Attach to the custom network
     volumes:
