@@ -11,5 +11,4 @@ COPY build/libs/offeringManager-0.02.jar .
 EXPOSE 8080
 
 # Specify the entry point (adjust if your jar file name or main class differs)
-# CMD ["ls", "."]
 CMD ["java", "-jar", "offeringManager-0.02.jar"]

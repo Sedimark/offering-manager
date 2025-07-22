@@ -53,11 +53,14 @@
     "@type": "rdfs:Literal"
   },
   "sedi:hasAsset": [{
-    "@id": "387fe731-3ddf-4356-b59f-21202cb3a778",
-    "@type": "sedi:Asset",
+    "@id": "https://uc.sedimark.eu/offerings/b5093df8-3ddf-4356-b59f-21202cb3a776/assets/387fe731-3ddf-4356-b59f-21202cb3a778",
+    "@type": "sedi:DataAsset",
     "dct:title": {
       "@value": "Bike 1 asset",
       "@type": "rdfs:Literal"
+    },
+    "sedi:offeredBy": {
+      "@id": "https://uc.sedimark.eu/offerings/b5093df8-3ddf-4356-b59f-21202cb3a776"
     },
     "dct:description": {
       "@value": "This asset provides data from Bike 1",
@@ -88,7 +91,7 @@
       "@type": "dct:Location"
     },
     "sedi:isProvidedBy" : {
-      "@id": "https://uc.sedimark.eu/v3/assets/387fe731-3ddf-4356-b59f-21202c23a778",
+      "@id": "https://uc.sedimark.eu/offerings/b5093df8-3ddf-4356-b59f-21202cb3a776/assets/387fe731-3ddf-4356-b59f-21202cb3a778",
       "@type": "sedi:AssetProvision",
       "dct:title": {
         "@value": "Bike 1 asset provision",
@@ -98,7 +101,7 @@
         "@id": "HttpData"
       },
       "dct:description": {
-        "@value": "This asset provision allows access to data from Bike 1 through a REST API [... more information about API endpoints, etc...]",
+        "@value": "This asset provision allows access to data from Bike 1 through a REST API",
         "@type": "rdfs:Literal"
       },
       "dct:issued": {
@@ -106,7 +109,7 @@
         "@type": "rdfs:Literal"
       },
       "dcat:accessURL": {
-        "@id": "http://provider-connector-data-endpoint"
+        "@id": "http://provider-domain-private-endpoint"
       }
     }
   }
