@@ -17,7 +17,7 @@
     "@id": "https://uc.sedimark.eu/offerings"
   },
   "sedi:hasOfferingContract": {
-    "@id": "https://uc.sedimark.eu/offerings/dummy-offeringContract-id",
+    "@id": "https://uc.sedimark.eu/offerings/dummy-offering-id/offeringContract/dummy-offeringContract-id",
     "@type": "sedi:OfferingContract",
     "odrl:permission": [],
     "odrl:prohibition": [],
@@ -92,7 +92,7 @@
       "@type": "dct:Location"
     },
     "sedi:isProvidedBy" : {
-      "@id": "https://uc.sedimark.eu/offerings/dummy-offering-id/assets/dummy-offering-id/provision",
+      "@id": "https://uc.sedimark.eu/offerings/dummy-offering-id/assetProvision/dummy-assetProvision-id",
       "@type": "sedi:AssetProvision",
       "dct:title": {
         "@value": "Bike 1 asset provision",
