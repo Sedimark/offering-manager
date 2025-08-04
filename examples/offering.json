@@ -11,64 +11,65 @@
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "dcat": "http://www.w3.org/ns/dcat#"
   },
-  "@id": "https://uc.sedimark.eu/offerings/b5093df8-3ddf-4356-b59f-21202cb3a776",
+  "@id": "https://uc.sedimark.eu/offerings/dummy-offering-id",
   "@type": "sedi:Offering",
   "sedi:isListedBy": {
     "@id": "https://uc.sedimark.eu/offerings"
   },
   "sedi:hasOfferingContract": {
-    "@id": "30a032c2-ff2d-49ac-9ab0-a04cbb586b0f",
+    "@id": "https://uc.sedimark.eu/offerings/dummy-offeringContract-id",
     "@type": "sedi:OfferingContract",
     "odrl:permission": [],
     "odrl:prohibition": [],
     "odrl:obligation": []
   },
   "dct:issued": {
-    "@value": "2024-01-02",
-    "@type": "rdfs:Literal"
+    "@value": "2024-01-02T00:00:00",
+    "@type": "xsd:dateTime"
   },
   "dct:language": {
     "@value": "English",
-    "@type": "rdfs:Literal"
+    "@type": "xsd:string"
   },
   "dct:title": {
     "@value": "Bike 1",
-    "@type": "rdfs:Literal"
+    "@type": "xsd:string"
   },
   "dct:description": {
     "@value": "This offering provides data assets with data from Bike 1",
-    "@type": "rdfs:Literal"
+    "@type": "xsd:string"
   },
   "dct:publisher": {
-    "@id": "https://uc.sedimark.eu/"
+    "@id": "https://uc.sedimark.eu/self-description-endpoint"
   },
   "dct:creator": {
-    "@id": "https://uc.sedimark.eu/"
+    "@value": "Bike Company XXX",
+    "@type": "xsd:string"
   },
   "dcat:themeTaxonomy": {
     "@id": "https://w3id.org/sedimark/vocab/sdm"
   },
   "dct:license": {
     "@value": "This work is licensed under Creative Commons Attribution-NoDerivatives 4.0 International.\nhttps://creativecommons.org/licenses/by-nd/4.0/",
-    "@type": "rdfs:Literal"
+    "@type": "xsd:string"
   },
   "sedi:hasAsset": [{
-    "@id": "https://uc.sedimark.eu/offerings/b5093df8-3ddf-4356-b59f-21202cb3a776/assets/387fe731-3ddf-4356-b59f-21202cb3a778",
+    "@id": "https://uc.sedimark.eu/offerings/dummy-offering-id/assets/dummy-asset-id",
     "@type": "sedi:DataAsset",
     "dct:title": {
       "@value": "Bike 1 asset",
-      "@type": "rdfs:Literal"
+      "@type": "xsd:string"
     },
     "sedi:offeredBy": {
-      "@id": "https://uc.sedimark.eu/offerings/b5093df8-3ddf-4356-b59f-21202cb3a776"
+      "@id": "https://uc.sedimark.eu/offerings/dummy-offering-id"
     },
     "dct:description": {
       "@value": "This asset provides data from Bike 1",
-      "@type": "rdfs:Literal"
+      "@type": "xsd:string"
     },
     "dct:issued": {
-      "@value": "2024-01-02",
-      "@type": "rdfs:Literal"
+      "@value": "2024-01-02T00:00:00",
+      "@type": "xsd:dateTime"
     },
     "dct:creator": {
       "@id": "https://uc.sedimark.eu/"
@@ -79,11 +80,11 @@
     "dcat:keyword" : [
       {
         "@value": "Bike",
-        "@type": "rdfs:Literal"
+        "@type": "xsd:string"
       },
       {
         "@value": "Santander",
-        "@type": "rdfs:Literal"
+        "@type": "xsd:string"
       }
     ],
     "dct:spatial" : {
@@ -91,22 +92,22 @@
       "@type": "dct:Location"
     },
     "sedi:isProvidedBy" : {
-      "@id": "https://uc.sedimark.eu/offerings/b5093df8-3ddf-4356-b59f-21202cb3a776/assets/387fe731-3ddf-4356-b59f-21202cb3a778",
+      "@id": "https://uc.sedimark.eu/offerings/dummy-offering-id/assets/dummy-offering-id/provision",
       "@type": "sedi:AssetProvision",
       "dct:title": {
         "@value": "Bike 1 asset provision",
-        "@type": "rdfs:Literal"
+        "@type": "xsd:string"
       },
       "dct:format": {
         "@id": "HttpData"
       },
       "dct:description": {
         "@value": "This asset provision allows access to data from Bike 1 through a REST API",
-        "@type": "rdfs:Literal"
+        "@type": "xsd:string"
       },
       "dct:issued": {
-        "@value": "2024-01-02",
-        "@type": "rdfs:Literal"
+        "@value": "2024-01-02T00:00:00",
+        "@type": "xsd:dateTime"
       },
       "dcat:accessURL": {
         "@id": "http://provider-domain-private-endpoint"
