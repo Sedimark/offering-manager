@@ -13,7 +13,7 @@
         "params": [],
         "body": {
           "mode": "json",
-          "json": "{\n  \"@context\": {\n    \"@vocab\": \"https://w3id.org/sedimark/ontology#\",\n    \"sedi\": \"https://w3id.org/sedimark/ontology#\",\n    \"dct\": \"http://purl.org/dc/terms/\",\n    \"odrl\": \"http://www.w3.org/ns/odrl/2/\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"rdf\": \"http://www.w3.org/1999/02/22-rdf-syntax-ns#\",\n    \"xml\": \"http://www.w3.org/XML/1998/namespace\",\n    \"xsd\": \"http://www.w3.org/2001/XMLSchema#\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"dcat\": \"http://www.w3.org/ns/dcat#\"\n  },\n  \"@id\": \"https://uc.sedimark.eu/offerings/b5093df8-3ddf-4356-b59f-21202cb3a776\",\n  \"@type\": \"sedi:Offering\",\n  \"sedi:isListedBy\": {\n    \"@id\": \"https://uc.sedimark.eu/offerings\"\n  },\n  \"sedi:hasOfferingContract\": {\n    \"@id\": \"30a032c2-ff2d-49ac-9ab0-a04cbb586b0f\",\n    \"@type\": \"sedi:OfferingContract\",\n    \"odrl:permission\": [],\n    \"odrl:prohibition\": [],\n    \"odrl:obligation\": []\n  },\n  \"dct:issued\": {\n    \"@value\": \"2024-01-02\",\n    \"@type\": \"rdfs:Literal\"\n  },\n  \"dct:language\": {\n    \"@value\": \"English\",\n    \"@type\": \"rdfs:Literal\"\n  },\n  \"dct:title\": {\n    \"@value\": \"Bike 1\",\n    \"@type\": \"rdfs:Literal\"\n  },\n  \"dct:description\": {\n    \"@value\": \"This offering provides data assets with data from Bike 1\",\n    \"@type\": \"rdfs:Literal\"\n  },\n  \"dct:publisher\": {\n    \"@id\": \"https://uc.sedimark.eu/\"\n  },\n  \"dct:creator\": {\n    \"@id\": \"https://uc.sedimark.eu/\"\n  },\n  \"dcat:themeTaxonomy\": {\n    \"@id\": \"https://w3id.org/sedimark/vocab/sdm\"\n  },\n  \"dct:license\": {\n    \"@value\": \"This work is licensed under Creative Commons Attribution-NoDerivatives 4.0 International.\\nhttps://creativecommons.org/licenses/by-nd/4.0/\",\n    \"@type\": \"rdfs:Literal\"\n  },\n  \"sedi:hasAsset\": [{\n    \"@id\": \"387fe731-3ddf-4356-b59f-21202cb3a778\",\n    \"@type\": \"sedi:Asset\",\n    \"dct:title\": {\n      \"@value\": \"Bike 1 asset\",\n      \"@type\": \"rdfs:Literal\"\n    },\n    \"dct:description\": {\n      \"@value\": \"This asset provides data from Bike 1\",\n      \"@type\": \"rdfs:Literal\"\n    },\n    \"dct:issued\": {\n      \"@value\": \"2024-01-02\",\n      \"@type\": \"rdfs:Literal\"\n    },\n    \"dct:creator\": {\n      \"@id\": \"https://uc.sedimark.eu/\"\n    },\n    \"dcat:theme\": {\n      \"@id\": \"https://w3id.org/sedimark/vocab/sdm/entity/vehicle\"\n    },\n    \"dcat:keyword\" : [\n      {\n        \"@value\": \"Bike\",\n        \"@type\": \"rdfs:Literal\"\n      },\n      {\n        \"@value\": \"Santander\",\n        \"@type\": \"rdfs:Literal\"\n      }\n    ],\n    \"dct:spatial\" : {\n      \"@id\": \"http://www.wikidata.org/entity/Q12233\",\n      \"@type\": \"dct:Location\"\n    },\n    \"sedi:isProvidedBy\" : {\n      \"@id\": \"https://uc.sedimark.eu/v3/assets/387fe731-3ddf-4356-b59f-21202c23a778\",\n      \"@type\": \"sedi:AssetProvision\",\n      \"dct:title\": {\n        \"@value\": \"Bike 1 asset provision\",\n        \"@type\": \"rdfs:Literal\"\n      },\n      \"dct:format\": {\n        \"@id\": \"HttpData\"\n      },\n      \"dct:description\": {\n        \"@value\": \"This asset provision allows access to data from Bike 1 through a REST API [... more information about API endpoints, etc...]\",\n        \"@type\": \"rdfs:Literal\"\n      },\n      \"dct:issued\": {\n        \"@value\": \"2024-01-02\",\n        \"@type\": \"rdfs:Literal\"\n      },\n      \"dcat:accessURL\": {\n        \"@id\": \"http://provider-connector-data-endpoint\"\n      }\n    }\n  }\n  ]\n}",
+          "json": "{\n  \"@context\": {\n    \"@vocab\": \"https://w3id.org/sedimark/ontology#\",\n    \"sedi\": \"https://w3id.org/sedimark/ontology#\",\n    \"dct\": \"http://purl.org/dc/terms/\",\n    \"odrl\": \"http://www.w3.org/ns/odrl/2/\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"rdf\": \"http://www.w3.org/1999/02/22-rdf-syntax-ns#\",\n    \"xml\": \"http://www.w3.org/XML/1998/namespace\",\n    \"xsd\": \"http://www.w3.org/2001/XMLSchema#\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"dcat\": \"http://www.w3.org/ns/dcat#\"\n  },\n  \"@id\": \"https://uc.sedimark.eu/offerings/dummy-offering-id\",\n  \"@type\": \"sedi:Offering\",\n  \"sedi:isListedBy\": {\n    \"@id\": \"https://uc.sedimark.eu/offerings\"\n  },\n  \"sedi:hasOfferingContract\": {\n    \"@id\": \"https://uc.sedimark.eu/offerings/dummy-offering-id/offeringContract/dummy-offeringContract-id\",\n    \"@type\": \"sedi:OfferingContract\",\n    \"odrl:permission\": [],\n    \"odrl:prohibition\": [],\n    \"odrl:obligation\": []\n  },\n  \"dct:issued\": {\n    \"@value\": \"2024-01-02T00:00:00\",\n    \"@type\": \"xsd:dateTime\"\n  },\n  \"dct:language\": {\n    \"@value\": \"English\",\n    \"@type\": \"xsd:string\"\n  },\n  \"dct:title\": {\n    \"@value\": \"Bike 1\",\n    \"@type\": \"xsd:string\"\n  },\n  \"dct:description\": {\n    \"@value\": \"This offering provides data assets with data from Bike 1\",\n    \"@type\": \"xsd:string\"\n  },\n  \"dct:publisher\": {\n    \"@id\": \"https://uc.sedimark.eu/self-description-endpoint\"\n  },\n  \"dct:creator\": {\n    \"@value\": \"Bike Company XXX\",\n    \"@type\": \"xsd:string\"\n  },\n  \"dcat:themeTaxonomy\": {\n    \"@id\": \"https://w3id.org/sedimark/vocab/sdm\"\n  },\n  \"dct:license\": {\n    \"@value\": \"This work is licensed under Creative Commons Attribution-NoDerivatives 4.0 International.\\nhttps://creativecommons.org/licenses/by-nd/4.0/\",\n    \"@type\": \"xsd:string\"\n  },\n  \"sedi:hasAsset\": [{\n    \"@id\": \"https://uc.sedimark.eu/offerings/dummy-offering-id/assets/dummy-asset-id\",\n    \"@type\": \"sedi:DataAsset\",\n    \"dct:title\": {\n      \"@value\": \"Bike 1 asset\",\n      \"@type\": \"xsd:string\"\n    },\n    \"sedi:offeredBy\": {\n      \"@id\": \"https://uc.sedimark.eu/offerings/dummy-offering-id\"\n    },\n    \"dct:description\": {\n      \"@value\": \"This asset provides data from Bike 1\",\n      \"@type\": \"xsd:string\"\n    },\n    \"dct:issued\": {\n      \"@value\": \"2024-01-02T00:00:00\",\n      \"@type\": \"xsd:dateTime\"\n    },\n    \"dct:creator\": {\n      \"@id\": \"https://uc.sedimark.eu/\"\n    },\n    \"dcat:theme\": {\n      \"@id\": \"https://w3id.org/sedimark/vocab/sdm/entity/vehicle\"\n    },\n    \"dcat:keyword\" : [\n      {\n        \"@value\": \"Bike\",\n        \"@type\": \"xsd:string\"\n      },\n      {\n        \"@value\": \"Santander\",\n        \"@type\": \"xsd:string\"\n      }\n    ],\n    \"dct:spatial\" : {\n      \"@id\": \"http://www.wikidata.org/entity/Q12233\",\n      \"@type\": \"dct:Location\"\n    },\n    \"sedi:isProvidedBy\" : {\n      \"@id\": \"https://uc.sedimark.eu/offerings/dummy-offering-id/assetProvision/dummy-assetProvision-id\",\n      \"@type\": \"sedi:AssetProvision\",\n      \"dct:title\": {\n        \"@value\": \"Bike 1 asset provision\",\n        \"@type\": \"xsd:string\"\n      },\n      \"dct:format\": {\n        \"@id\": \"HttpData\"\n      },\n      \"dct:description\": {\n        \"@value\": \"This asset provision allows access to data from Bike 1 through a REST API\",\n        \"@type\": \"xsd:string\"\n      },\n      \"dct:issued\": {\n        \"@value\": \"2024-01-02T00:00:00\",\n        \"@type\": \"xsd:dateTime\"\n      },\n      \"dcat:accessURL\": {\n        \"@id\": \"http://provider-domain-private-endpoint\"\n      }\n    }\n  }\n  ]\n}",
           "formUrlEncoded": [],
           "multipartForm": []
         },
@@ -52,7 +52,7 @@
     {
       "type": "http",
       "name": "GET Offering by ID",
-      "seq": 3,
+      "seq": 2,
       "request": {
         "url": "{{base_path}}/offerings/{{offering_id}}",
         "method": "GET",
@@ -75,7 +75,7 @@
     {
       "type": "http",
       "name": "GET Self-Listing",
-      "seq": 2,
+      "seq": 1,
       "request": {
         "url": "{{base_path}}/offerings",
         "method": "GET",
@@ -118,22 +118,45 @@
           "mode": "none"
         }
       }
+    },
+    {
+      "type": "http",
+      "name": "GET Offering NFT Address by ID",
+      "seq": 3,
+      "request": {
+        "url": "{{base_path}}/offerings/{{offering_id}}/nftaddress",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
     }
   ],
-  "activeEnvironmentUid": "xHrJN2pd0DNJWSFj1ct1F",
+  "activeEnvironmentUid": "cBoxO6UfbX4DmPVsuZWFn",
   "environments": [
     {
       "variables": [
         {
           "name": "offering_id",
-          "value": "50a4061e-88e9-43be-8ee4-2e572645f25e",
+          "value": "92d9c45f-b64b-4fbc-85b4-f226ac4f4439",
           "enabled": true,
           "secret": false,
           "type": "text"
         },
         {
           "name": "base_path",
-          "value": "http://localhost:8080",
+          "value": "http://10.10.40.121:8080",
           "enabled": true,
           "secret": false,
           "type": "text"
