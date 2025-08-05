@@ -24,7 +24,7 @@
     "odrl:obligation": []
   },
   "dct:issued": {
-    "@value": "2024-01-02T00:00:00",
+    "@value": "2025-12-31T00:00:00Z",
     "@type": "xsd:dateTime"
   },
   "dct:language": {
@@ -40,7 +40,7 @@
     "@type": "xsd:string"
   },
   "dct:publisher": {
-    "@id": "https://uc.sedimark.eu/self-description-endpoint"
+    "@id": "did:iota:lnk:0xf053682e4724ba221e2f49dd0adabba135cd4ccb08d492440e163482064b617a"
   },
   "dct:creator": {
     "@value": "Bike Company XXX",
@@ -68,11 +68,12 @@
       "@type": "xsd:string"
     },
     "dct:issued": {
-      "@value": "2024-01-02T00:00:00",
+      "@value": "2025-12-31T00:00:00Z",
       "@type": "xsd:dateTime"
     },
     "dct:creator": {
-      "@id": "https://uc.sedimark.eu/"
+      "@value": "Bike Company XXX",
+      "@type": "xsd:string"
     },
     "dcat:theme": {
       "@id": "https://w3id.org/sedimark/vocab/sdm/entity/vehicle"
@@ -106,12 +107,24 @@
         "@type": "xsd:string"
       },
       "dct:issued": {
-        "@value": "2024-01-02T00:00:00",
+        "@value": "2025-12-31T00:00:00Z",
         "@type": "xsd:dateTime"
       },
       "dcat:accessURL": {
         "@id": "http://provider-domain-private-endpoint"
-      }
+      },
+      "sedi:headers" : [
+        {
+          "sedi:headerName": {
+            "@value": "Accept",
+            "@type": "xsd:string"
+          },
+          "sedi:headerValue": {
+            "@value": "application/ld+json",
+            "@type": "xsd:string"
+          }
+        }
+        ]
     }
   }
   ]
