@@ -1,6 +1,6 @@
 {
   "@context": {
-    "@vocab": "https://w3id.org/sedimark/ontology#",
+    "@vocab": "https://w3id.org/sedimark/vocab/",
     "sedi": "https://w3id.org/sedimark/ontology#",
     "dct": "http://purl.org/dc/terms/",
     "odrl": "http://www.w3.org/ns/odrl/2/",
@@ -14,12 +14,70 @@
   "@id": "https://uc.sedimark.eu/offerings/dummy-offering-id",
   "@type": "sedi:Offering",
   "sedi:isListedBy": {
-    "@id": "https://uc.sedimark.eu/offerings"
+    "@id": "https://uc.sedimark.eu/offerings",
+    "belongsTo" : {
+      "@id" : "participant-URI",
+      "@type" : "sedi:Participant",
+      "alternateName" : "juanrasantana",
+      "accountId" : "did:iota:lnk:0xf053682e4724ba221e2f49dd0adabba135cd4ccb08d492440e163482064b617a"
+    }
   },
   "sedi:hasOfferingContract": {
     "@id": "https://uc.sedimark.eu/offerings/dummy-offering-id/offeringContract/dummy-offeringContract-id",
     "@type": "sedi:OfferingContract",
-    "odrl:permission": [],
+    "profile": "https://sedimark.eu/odrl/sedi-profile",
+    "uid": "https://uc.sedimark.eu/offerings/dummy-offering-id/offeringContract/dummy-offeringContract-id",
+    "odrl:permission": [{
+      "target": "https://uc.sedimark.eu/offerings/dummy-offering-id",
+      "assigner": "did:iota:lnk:0xf053682e4724ba221e2f49dd0adabba135cd4ccb08d492440e163482064b617a",
+      "action": "odrl:use",
+      "constraint": [
+        {
+          "leftOperand": "odrl:dateTime",
+          "operator": "odrl:lteq",
+          "rightOperand": {"@value": "2025-12-31T00:00:00Z", "@type": "xsd:dateTime"}
+        },
+        {
+          "leftOperand": "odrl:dateTime",
+          "operator": "odrl:gteq",
+          "rightOperand": {"@value": "2025-08-31T00:00:00Z", "@type": "xsd:dateTime"}
+        },
+        {
+          "leftOperand" : "sedi:claim:memberOf",
+          "operator"    : "odrl:eq",
+          "rightOperand": "SEDIMARK marketplace"
+        },
+        {
+          "leftOperand" : "sedi:dataTokenOwnership",
+          "operator"    : "eq",
+          "rightOperand": "true"
+        }
+      ],
+      "duty": [
+        {
+          "action": [
+            {
+              "rdf:value": {"@id": "sedi:purchaseDataToken"},
+              "refinement": [
+                {
+                  "leftOperand": "odrl:payAmount",
+                  "operator": "odrl:eq",
+                  "rightOperand": {"@value": "1", "@type": "xsd:decimal"},
+                  "unit": "sedi:nativeToken"
+                }
+              ]
+            }
+          ],
+          "constraint": [
+            {
+              "leftOperand": "odrl:event",
+              "operator": "odrl:lt",
+              "rightOperand": {"@id": "sedi:dspContractAgreementFinalized"}
+            }
+          ]
+        }
+      ]
+    }],
     "odrl:prohibition": [],
     "odrl:obligation": []
   },
