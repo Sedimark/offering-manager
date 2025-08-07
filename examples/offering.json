@@ -1,7 +1,7 @@
 {
   "@context": {
     "@vocab": "https://w3id.org/sedimark/vocab/",
-    "sedi": "https://w3id.org/sedimark/ontology#",
+    "sedimark": "https://w3id.org/sedimark/ontology#",
     "dct": "http://purl.org/dc/terms/",
     "odrl": "http://www.w3.org/ns/odrl/2/",
     "owl": "http://www.w3.org/2002/07/owl#",
@@ -12,67 +12,74 @@
     "dcat": "http://www.w3.org/ns/dcat#"
   },
   "@id": "https://uc.sedimark.eu/offerings/dummy-offering-id",
-  "@type": "sedi:Offering",
-  "sedi:isListedBy": {
+  "@type": "sedimark:Offering",
+  "sedimark:isListedBy": {
     "@id": "https://uc.sedimark.eu/offerings",
-    "belongsTo" : {
+    "@type": "sedimark:Self-Listing",
+    "sedimark:belongsTo" : {
       "@id" : "participant-URI",
-      "@type" : "sedi:Participant",
-      "alternateName" : "juanrasantana",
-      "accountId" : "did:iota:lnk:0xf053682e4724ba221e2f49dd0adabba135cd4ccb08d492440e163482064b617a"
+      "@type" : "sedimark:Participant",
+      "xsd:alternateName" : {
+        "@value": "juanrasantana",
+        "@type": "xsd:string"
+      },
+      "xsd:accountId" : {
+        "@value": "did:iota:lnk:0xf053682e4724ba221e2f49dd0adabba135cd4ccb08d492440e163482064b617a",
+        "@type": "xsd:string"
+      }
     }
   },
-  "sedi:hasOfferingContract": {
+  "sedimark:hasOfferingContract": {
     "@id": "https://uc.sedimark.eu/offerings/dummy-offering-id/offeringContract/dummy-offeringContract-id",
-    "@type": "sedi:OfferingContract",
-    "profile": "https://sedimark.eu/odrl/sedi-profile",
-    "uid": "https://uc.sedimark.eu/offerings/dummy-offering-id/offeringContract/dummy-offeringContract-id",
+    "@type": "sedimark:OfferingContract",
+    "odrl:profile": "https://sedimark.eu/odrl/sedi-profile",
+    "odrl:uid": "https://uc.sedimark.eu/offerings/dummy-offering-id/offeringContract/dummy-offeringContract-id",
     "odrl:permission": [{
-      "target": "https://uc.sedimark.eu/offerings/dummy-offering-id",
-      "assigner": "did:iota:lnk:0xf053682e4724ba221e2f49dd0adabba135cd4ccb08d492440e163482064b617a",
-      "action": "odrl:use",
-      "constraint": [
+      "odrl:target": "https://uc.sedimark.eu/offerings/dummy-offering-id",
+      "odrl:assigner": "did:iota:lnk:0xf053682e4724ba221e2f49dd0adabba135cd4ccb08d492440e163482064b617a",
+      "odrl:action": "odrl:use",
+      "odrl:constraint": [
         {
-          "leftOperand": "odrl:dateTime",
-          "operator": "odrl:lteq",
-          "rightOperand": {"@value": "2025-12-31T00:00:00Z", "@type": "xsd:dateTime"}
+          "odrl:leftOperand": "odrl:dateTime",
+          "odrl:operator": "odrl:lteq",
+          "odrl:rightOperand": {"@value": "2025-12-31T00:00:00Z", "@type": "xsd:dateTime"}
         },
         {
-          "leftOperand": "odrl:dateTime",
-          "operator": "odrl:gteq",
-          "rightOperand": {"@value": "2025-08-31T00:00:00Z", "@type": "xsd:dateTime"}
+          "odrl:leftOperand": "odrl:dateTime",
+          "odrl:operator": "odrl:gteq",
+          "odrl:rightOperand": {"@value": "2025-08-31T00:00:00Z", "@type": "xsd:dateTime"}
         },
         {
-          "leftOperand" : "sedi:claim:memberOf",
-          "operator"    : "odrl:eq",
-          "rightOperand": "SEDIMARK marketplace"
+          "odrl:leftOperand" : "sedimark:claimMemberOf",
+          "odrl:operator"    : "odrl:eq",
+          "odrl:rightOperand": "SEDIMARK marketplace"
         },
         {
-          "leftOperand" : "sedi:dataTokenOwnership",
-          "operator"    : "eq",
-          "rightOperand": "true"
+          "odrl:leftOperand" : "sedimark:dataTokenOwnership",
+          "odrl:operator"    : "eq",
+          "odrl:rightOperand": "true"
         }
       ],
-      "duty": [
+      "odrl:duty": [
         {
-          "action": [
+          "odrl:action": [
             {
-              "rdf:value": {"@id": "sedi:purchaseDataToken"},
-              "refinement": [
+              "rdf:value": {"@id": "sedimark:purchaseDataToken"},
+              "odrl:refinement": [
                 {
-                  "leftOperand": "odrl:payAmount",
-                  "operator": "odrl:eq",
-                  "rightOperand": {"@value": "1", "@type": "xsd:decimal"},
-                  "unit": "sedi:nativeToken"
+                  "odrl:leftOperand": "odrl:payAmount",
+                  "odrl:operator": "odrl:eq",
+                  "odrl:rightOperand": {"@value": "1", "@type": "xsd:decimal"},
+                  "odrl:unit": "sedimark:nativeToken"
                 }
               ]
             }
           ],
-          "constraint": [
+          "odrl:constraint": [
             {
-              "leftOperand": "odrl:event",
-              "operator": "odrl:lt",
-              "rightOperand": {"@id": "sedi:dspContractAgreementFinalized"}
+              "odrl:leftOperand": "odrl:event",
+              "odrl:operator": "odrl:lt",
+              "odrl:rightOperand": {"@id": "sedimark:dspContractAgreementFinalized"}
             }
           ]
         }
@@ -111,14 +118,14 @@
     "@value": "This work is licensed under Creative Commons Attribution-NoDerivatives 4.0 International.\nhttps://creativecommons.org/licenses/by-nd/4.0/",
     "@type": "xsd:string"
   },
-  "sedi:hasAsset": [{
+  "sedimark:hasAsset": [{
     "@id": "https://uc.sedimark.eu/offerings/dummy-offering-id/assets/dummy-asset-id",
-    "@type": "sedi:DataAsset",
+    "@type": "sedimark:Asset",
     "dct:title": {
       "@value": "Bike 1 asset",
       "@type": "xsd:string"
     },
-    "sedi:offeredBy": {
+    "sedimark:offeredBy": {
       "@id": "https://uc.sedimark.eu/offerings/dummy-offering-id"
     },
     "dct:description": {
@@ -150,9 +157,9 @@
       "@id": "http://www.wikidata.org/entity/Q12233",
       "@type": "dct:Location"
     },
-    "sedi:isProvidedBy" : {
+    "sedimark:isProvidedBy" : {
       "@id": "https://uc.sedimark.eu/offerings/dummy-offering-id/assetProvision/dummy-assetProvision-id",
-      "@type": "sedi:AssetProvision",
+      "@type": "sedimark:AssetProvision",
       "dct:title": {
         "@value": "Bike 1 asset provision",
         "@type": "xsd:string"
@@ -171,13 +178,13 @@
       "dcat:accessURL": {
         "@id": "http://provider-domain-private-endpoint"
       },
-      "sedi:headers" : [
+      "sedimark:headers" : [
         {
-          "sedi:headerName": {
+          "sedimark:headerName": {
             "@value": "Accept",
             "@type": "xsd:string"
           },
-          "sedi:headerValue": {
+          "sedimark:headerValue": {
             "@value": "application/ld+json",
             "@type": "xsd:string"
           }
