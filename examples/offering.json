@@ -41,22 +41,30 @@
       "odrl:constraint": [
         {
           "odrl:leftOperand": "odrl:dateTime",
-          "odrl:operator": "odrl:lteq",
+          "odrl:operator": {
+            "@id" : "odrl:lteq"
+          },
           "odrl:rightOperand": {"@value": "2025-12-31T00:00:00Z", "@type": "xsd:dateTime"}
         },
         {
           "odrl:leftOperand": "odrl:dateTime",
-          "odrl:operator": "odrl:gteq",
+          "odrl:operator": {
+            "@id" : "odrl:gteq"
+          },
           "odrl:rightOperand": {"@value": "2025-08-31T00:00:00Z", "@type": "xsd:dateTime"}
         },
         {
-          "odrl:leftOperand" : "sedimark:claimMemberOf",
-          "odrl:operator"    : "odrl:eq",
+          "odrl:leftOperand" : "sedi:claimMemberOf",
+          "odrl:operator"    : {
+            "@id" : "odrl:eq"
+          },
           "odrl:rightOperand": "SEDIMARK marketplace"
         },
         {
-          "odrl:leftOperand" : "sedimark:dataTokenOwnership",
-          "odrl:operator"    : "eq",
+          "odrl:leftOperand" : "sedi:dataTokenOwnership",
+          "odrl:operator"    : {
+            "@id" : "odrl:eq"
+          },
           "odrl:rightOperand": "true"
         }
       ],
@@ -64,13 +72,15 @@
         {
           "odrl:action": [
             {
-              "rdf:value": {"@id": "sedimark:purchaseDataToken"},
+              "odrl:action" : "sedi:purchaseDataToken",
               "odrl:refinement": [
                 {
                   "odrl:leftOperand": "odrl:payAmount",
-                  "odrl:operator": "odrl:eq",
+                  "odrl:operator": {
+                    "@id" : "odrl:eq"
+                  },
                   "odrl:rightOperand": {"@value": "1", "@type": "xsd:decimal"},
-                  "odrl:unit": "sedimark:nativeToken"
+                  "odrl:unit": "sedi:nativeToken"
                 }
               ]
             }
@@ -78,8 +88,10 @@
           "odrl:constraint": [
             {
               "odrl:leftOperand": "odrl:event",
-              "odrl:operator": "odrl:lt",
-              "odrl:rightOperand": {"@id": "sedimark:dspContractAgreementFinalized"}
+              "odrl:operator": {
+            "@id" : "odrl:lt"
+          },
+              "odrl:rightOperand": "sedi:dspContractAgreementFinalized"
             }
           ]
         }
