@@ -162,6 +162,37 @@
           "variable": []
         }
       }
+    },
+    {
+      "name": "GET Self-Listing with Pagination",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": null,
+        "description": "",
+        "url": {
+          "raw": "{{base_path}}/offerings?size=2&page=0",
+          "protocol": "",
+          "host": [
+            "{{base_path}}"
+          ],
+          "path": [
+            "offerings?size=2&page=0"
+          ],
+          "query": [
+            {
+              "key": "size",
+              "value": "2"
+            },
+            {
+              "key": "page",
+              "value": "0"
+            }
+          ],
+          "variable": []
+        }
+      }
     }
   ],
   "variable": [

@@ -5,7 +5,7 @@
     {
       "type": "http",
       "name": "CREATE Offering",
-      "seq": 4,
+      "seq": 5,
       "request": {
         "url": "{{base_path}}/offerings",
         "method": "POST",
@@ -29,7 +29,7 @@
     {
       "type": "http",
       "name": "DELETE Offering by ID",
-      "seq": 5,
+      "seq": 6,
       "request": {
         "url": "{{base_path}}/offerings/{{offering_id}}",
         "method": "DELETE",
@@ -52,7 +52,7 @@
     {
       "type": "http",
       "name": "GET Offering by ID",
-      "seq": 2,
+      "seq": 3,
       "request": {
         "url": "{{base_path}}/offerings/{{offering_id}}",
         "method": "GET",
@@ -98,7 +98,7 @@
     {
       "type": "http",
       "name": "UPDATE Offering",
-      "seq": 6,
+      "seq": 7,
       "request": {
         "url": "{{base_path}}/offerings/{{offering_id}}",
         "method": "PUT",
@@ -122,12 +122,48 @@
     {
       "type": "http",
       "name": "GET Offering NFT Address by ID",
-      "seq": 3,
+      "seq": 4,
       "request": {
         "url": "{{base_path}}/offerings/{{offering_id}}/nftaddress",
         "method": "GET",
         "headers": [],
         "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "GET Self-Listing with Pagination",
+      "seq": 2,
+      "request": {
+        "url": "{{base_path}}/offerings?size=2&page=0",
+        "method": "GET",
+        "headers": [],
+        "params": [
+          {
+            "name": "size",
+            "value": "2",
+            "type": "query",
+            "enabled": true
+          },
+          {
+            "name": "page",
+            "value": "0",
+            "type": "query",
+            "enabled": true
+          }
+        ],
         "body": {
           "mode": "none",
           "formUrlEncoded": [],
@@ -149,7 +185,7 @@
       "variables": [
         {
           "name": "offering_id",
-          "value": "4f02db06-ee06-474a-9daa-4d207696d36b",
+          "value": "debe6bd9-a284-4c93-ab2b-3d48bef1ac73",
           "enabled": true,
           "secret": false,
           "type": "text"

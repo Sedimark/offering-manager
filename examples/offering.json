@@ -9,7 +9,8 @@
     "xml": "http://www.w3.org/XML/1998/namespace",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "dcat": "http://www.w3.org/ns/dcat#"
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "schema": "https://schema.org/"
   },
   "@id": "https://uc.sedimark.eu/offerings/dummy-offering-id",
   "@type": "sedimark:Offering",
@@ -17,13 +18,13 @@
     "@id": "https://uc.sedimark.eu/offerings",
     "@type": "sedimark:Self-Listing",
     "sedimark:belongsTo" : {
-      "@id" : "participant-URI",
+      "@id" : "https://uc.sedimark.eu/participant-URI",
       "@type" : "sedimark:Participant",
-      "xsd:alternateName" : {
+      "schema:alternateName" : {
         "@value": "juanrasantana",
         "@type": "xsd:string"
       },
-      "xsd:accountId" : {
+      "schema:accountId" : {
         "@value": "did:iota:lnk:0xf053682e4724ba221e2f49dd0adabba135cd4ccb08d492440e163482064b617a",
         "@type": "xsd:string"
       }

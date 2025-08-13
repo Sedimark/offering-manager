@@ -30,9 +30,21 @@ It includes a `Dockerfile` for configuring and building the service image.
 
 1. Clone the repository
 2. Modify the env variables
-    - BASE_URI: Represents the root path of the API (e.g., http://0.0.0.0:8080/offerings).
+    - CONTAINER_ENDPOINT: endpoint exposed of the API (e.g., http://0.0.0.0:8080).
     - HASH_ALGORITHM: Defines the hashing algorithm to be used for offering records.
       By default, this is set to SHA-256 and should not be modified.
+    - EXTERNAL_ENDPOINT: public endpoint for the API
+    - EXTERNAL_CONNECTOR_ENDPOINT: public connector endpoint (e.g. http://public-connector-endpoint:8185/api/public)
+    - INTERNAL_CONNECTOR_ENDPOINT= private connector endpoint (e.g. http://private-connector-endpoint:8181)
+    - INTERNAL_DLTBOOTH_ENDPOINT=(e.g. http://dlt-booth-private-endpoint:8085)
+    - ENABLE_POSTGRES_PERSISTENCE: true or false
+    - ENABLE_CONNECTOR_SERVICE. true or false
+    - ENABLE_DLTBOOTH_SERVICE: true or false
+    - POSTGRES_DB: offeringManager
+    - POSTGRES_USER: offeringManager
+    - POSTGRES_HOST: postgres-offering-manager
+    - POSTGRES_PORT: 5432
+    - POSTGRES_PASSWORD: change_this_password
 3. Build and start the containerized (Docker) application:
    ```bash
    docker-compose up --build
@@ -59,7 +71,8 @@ API can be also found in the bruno and postman collections shared in this repo.
 - **Self-Listing endpoint: List All Offerings**:  
   `GET /offerings`
   **Description**: Retrieves a list of all available offerings.
-    - **Response**: `200 OK` with a JSON array of Offering URLs.
+    - **Optional headers for pagination: **: **page** for page number. **size** for number of offerings per page.
+    - **Response**: `200 OK` with a JSON array of Offering URLs. If there is pagination, it returns the full Offering. Header **x-total-count** returns the number of existing offerings.
 
 - **Update Offering by ID**:  
   `PUT /offerings/{offeringId}`  
@@ -74,17 +87,7 @@ API can be also found in the bruno and postman collections shared in this repo.
   **Description**: Deletes an offering from the system.
     - **Response**: `204 No Content` on success, `404 Not Found` if the offering does not exist.
 
-## TODOs
-
-- **Offering Validation**:
-  Validate the Offering against the service expose by the "Interoperability Enabler" to ensure a proper formatting.
-
-- **Database Integration**:
-  Persist the offering using a database (e.g. Postgres) compatible to the one used by the EDC Connector.
+## Notes
 
 - **Security**:
   Limit certain endpoints to localhost access (i.e. CREATE/PUT, DELETE). Probably through Traefik.
-
-- **Policy permissions**:
-  Target is a required property within Permisision, Obligation, Prohibition array. Thus, OfferingManager should replace
-  with new Ids when generating the corresponding contract for the Connector.
