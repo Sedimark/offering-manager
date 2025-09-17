@@ -15,6 +15,7 @@ import eu.sedimark.service.helper.HttpClientHelper;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
 
 import static eu.sedimark.config.OntologyDefinitions.CONNECTOR_VOCAB;
@@ -62,6 +63,13 @@ public class ConnectorService {
         } else {
             addr.setType(asset.getIsProvidedBy().getFormat().getId());
         }
+
+        if (asset.getIsProvidedBy().getHeaders() != null) {
+            for (Header header : asset.getIsProvidedBy().getHeaders()) {
+                addr.setAdditionalProperty("header:" + header.getHeaderName().getValue(), header.getHeaderValue().getValue());
+            }
+        }
+
         // We update the accessURL afterwards to include the public one in the offeringService class
         addr.setBaseUrl(asset.getIsProvidedBy().getAccessURL().getId());
         connectorAsset.setDataAddress(addr);

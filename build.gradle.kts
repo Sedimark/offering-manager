@@ -6,7 +6,7 @@ plugins {
 
 var basename = "offeringManager"
 group = "eu.sedimark"
-version = "0.09"
+version = "0.11"
 
 repositories {
     mavenCentral()
